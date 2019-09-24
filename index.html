@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #ddd;
+        }
+        .humb {
+            line-height: 40px;
+            width: 100px;
+            height: 40px;
+            margin: 20px;
+            text-align: center;
+            color: #fff;
+            background: #333;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="navigation.js"></script>
+</head>
+<body>
+    <div class="page">
+        <!--Open-->
+        <div class="humb navigation-open" data-navigation="navigation">Open</div>
+    </div>
+    <!--Navigation-->
+    <div class="navigation" id="navigation">
+        <div class="navigation-close"></div>
+        <div class="navigation__container">
+            <h2>Navigation</h2>
+        </div>
+    </div>
+    <!--Blackout-->
+    <div class="navigation-blackout"></div>
+</body>
+</html>

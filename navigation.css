@@ -1,0 +1,80 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  flex-shrink: 0;
+  min-height: 100vh;
+  width: 380px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(100%);
+  visibility: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  transition: transform .5s 0s ease, visibility 0s .5s;
+  z-index: 106;
+}
+
+.navigation_active {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform .5s 0s ease, visibility 0s 0s;
+}
+
+.navigation::-webkit-scrollbar {
+   width: 5px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+   background-color: darkgrey;
+   outline: 1px solid slategrey;
+}
+
+.navigation__container {
+  padding: 40px 24px;
+}
+
+.navigation-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.navigation-close::before,
+.navigation-close::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 9px;
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.navigation-close::after {
+  transform: rotate(-45deg);
+}
+
+.navigation-blackout {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  z-index: 105;
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    width: 100%;
+  }
+}
